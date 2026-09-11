@@ -1,0 +1,16 @@
+{
+    "name": "Payosky.AshTwinProject",
+    "rootNamespace": "AshTwinProject",
+    "references": [
+        "GUID:8b32bf1a839157a419afb48b5e248be9"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

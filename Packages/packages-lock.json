@@ -14,6 +14,16 @@
       "dependencies": {},
       "hash": "5fadcb6564f0c6e988641e2e4a4aba4b6b1caafe"
     },
+    "com.payosky.ash-twin-project": {
+      "version": "file:com.payosky.ash-twin-project",
+      "depth": 0,
+      "source": "embedded",
+      "dependencies": {
+        "com.unity.test-framework": "1.6.0",
+        "com.payosky.nomai-framework": "0.1.1",
+        "com.cysharp.unitask": "2.5.11"
+      }
+    },
     "com.payosky.nomai-framework": {
       "version": "https://github.com/El-Calictivo/Nomai-Framework.git?path=/Packages/com.payosky.nomai-framework",
       "depth": 0,
@@ -23,7 +33,7 @@
         "com.mackysoft.serializereference-extensions": "1.7.0",
         "com.cysharp.unitask": "2.5.11"
       },
-      "hash": "b7174871294343feacd507205370ebd23737bfa5"
+      "hash": "9b10ff08a4c5ebef82810edfaacc78cf25ad24b4"
     },
     "com.unity.ext.nunit": {
       "version": "2.1.0",

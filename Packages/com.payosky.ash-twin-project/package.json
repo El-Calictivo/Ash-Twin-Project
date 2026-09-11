@@ -1,0 +1,26 @@
+{
+  "name": "com.payosky.ash-twin-project",
+  "displayName": "Ash Twin Project",
+  "version": "0.1.0",
+  "unity": "6000.0",
+  "description": "A framework designed around scalable netcode and services",
+  "license": "MIT",
+  "dependencies": {
+    "com.unity.test-framework": "1.6.0",
+    "com.payosky.nomai-framework": "0.1.1",
+    "com.cysharp.unitask": "2.5.11"
+  },
+  "author": {
+    "name": "Payosky",
+    "url": "http://www.payosky.dev",
+    "email": "payosky@proton.me"
+  },
+  "samples": [
+    {
+      "displayName": "Services",
+      "description": "Example scene demonstrating different Service loaders",
+      "path": "Samples/Services"
+    }
+  ],
+  "hideInEditor": false
+}
