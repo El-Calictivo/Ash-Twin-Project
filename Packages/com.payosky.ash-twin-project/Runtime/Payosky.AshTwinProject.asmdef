@@ -2,10 +2,12 @@
     "name": "Payosky.AshTwinProject",
     "rootNamespace": "AshTwinProject",
     "references": [
+        "GUID:e0cd26848372d4e5c891c569017e11f1",
         "GUID:1491147abca9d7d4bb7105af628b223e",
         "GUID:37e17ffe38d86ae48bc3207e83ffef88",
         "GUID:f51ebe6a0ceec4240a699833d6309b23",
-        "GUID:8b32bf1a839157a419afb48b5e248be9"
+        "GUID:8b32bf1a839157a419afb48b5e248be9",
+        ""
     ],
     "includePlatforms": [],
     "excludePlatforms": [],
