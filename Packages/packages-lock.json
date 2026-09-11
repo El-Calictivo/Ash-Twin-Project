@@ -1,5 +1,30 @@
 {
   "dependencies": {
+    "com.cysharp.unitask": {
+      "version": "https://github.com/Cysharp/UniTask.git?path=src/UniTask/Assets/Plugins/UniTask",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {},
+      "hash": "ceac8d6946b1125fe782cd171fbcb245b567dbf9"
+    },
+    "com.mackysoft.serializereference-extensions": {
+      "version": "https://github.com/mackysoft/Unity-SerializeReferenceExtensions.git?path=Assets/MackySoft/MackySoft.SerializeReferenceExtensions",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {},
+      "hash": "5fadcb6564f0c6e988641e2e4a4aba4b6b1caafe"
+    },
+    "com.payosky.nomai-framework": {
+      "version": "https://github.com/El-Calictivo/Nomai-Framework.git?path=/Packages/com.payosky.nomai-framework",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {
+        "com.unity.test-framework": "1.8.0",
+        "com.mackysoft.serializereference-extensions": "1.7.0",
+        "com.cysharp.unitask": "2.5.11"
+      },
+      "hash": "b7174871294343feacd507205370ebd23737bfa5"
+    },
     "com.unity.ext.nunit": {
       "version": "2.1.0",
       "depth": 1,
