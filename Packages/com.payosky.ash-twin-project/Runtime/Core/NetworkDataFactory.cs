@@ -16,12 +16,12 @@ namespace AshTwinProject.Core
                 return default;
             }
 
-            (string objectType, string objectPayload) = SerializeObject(objectToTransform);
+            (uint objectType, string objectPayload) = SerializeObject(objectToTransform);
 
             return new NetworkData32
             {
                 HasData = true,
-                DataType = new FixedString512Bytes(objectType),
+                TypeID = objectType,
                 DataPayload = new FixedString32Bytes(objectPayload)
             };
         }
@@ -32,12 +32,12 @@ namespace AshTwinProject.Core
                 return default;
             }
 
-            (string objectType, string objectPayload) = SerializeObject(objectToTransform);
+            (uint objectType, string objectPayload) = SerializeObject(objectToTransform);
 
             return new NetworkData64
             {
                 HasData = true,
-                DataType = new FixedString512Bytes(objectType),
+                TypeID = objectType,
                 DataPayload = new FixedString64Bytes(objectPayload)
             };
         }
@@ -48,12 +48,12 @@ namespace AshTwinProject.Core
                 return default;
             }
 
-            (string objectType, string objectPayload) = SerializeObject(objectToTransform);
+            (uint objectType, string objectPayload) = SerializeObject(objectToTransform);
 
             return new NetworkData128
             {
                 HasData = true,
-                DataType = new FixedString512Bytes(objectType),
+                TypeID = objectType,
                 DataPayload = new FixedString128Bytes(objectPayload)
             };
         }
@@ -64,12 +64,12 @@ namespace AshTwinProject.Core
                 return default;
             }
 
-            (string objectType, string objectPayload) = SerializeObject(objectToTransform);
+            (uint objectType, string objectPayload) = SerializeObject(objectToTransform);
 
             return new NetworkData512
             {
                 HasData = true,
-                DataType = new FixedString512Bytes(objectType),
+                TypeID = objectType,
                 DataPayload = new FixedString512Bytes(objectPayload)
             };
         }
@@ -80,19 +80,19 @@ namespace AshTwinProject.Core
                 return default;
             }
 
-            (string objectType, string objectPayload) = SerializeObject(objectToTransform);
+            (uint objectType, string objectPayload) = SerializeObject(objectToTransform);
 
             return new NetworkData4096
             {
                 HasData = true,
-                DataType = new FixedString512Bytes(objectType),
+                TypeID = objectType,
                 DataPayload = new FixedString4096Bytes(objectPayload)
             };
         }
 
-        private static (string, string ) SerializeObject(INetworkable objectToSerialize)
+        private static (uint, string ) SerializeObject(INetworkable objectToSerialize)
         {
-            string objectType = objectToSerialize.GetType().AssemblyQualifiedName;
+            uint objectType = NetworkTypeRegistry.GetTypeId(objectToSerialize);
             string objectPayload = JsonConvert.SerializeObject(objectToSerialize, Formatting.None);
             return (objectType, objectPayload);
         }
@@ -112,11 +112,11 @@ namespace AshTwinProject.Core
 
         public static T ToObject<T>(this NetworkData32 networkData) where T : class, INetworkable
         {
-            Type objectType = Type.GetType(networkData.DataType.Value);
+            Type objectType = NetworkTypeRegistry.GetType(networkData.TypeID);
 
             if (objectType == null || !typeof(T).IsAssignableFrom(objectType)) {
 #if UNITY_ENABLE_CHECKS
-                Debug.LogError($"Failed to deserialize object of type {typeof(T)} from {networkData.DataType.Value}");
+                Debug.LogError($"Failed to deserialize object of type {typeof(T)} from {objectType}");
 #endif
                 return null;
             }
@@ -127,11 +127,11 @@ namespace AshTwinProject.Core
 
         public static T ToObject<T>(this NetworkData64 networkData) where T : class, INetworkable
         {
-            Type objectType = Type.GetType(networkData.DataType.Value);
+            Type objectType = NetworkTypeRegistry.GetType(networkData.TypeID);
 
             if (objectType == null || !typeof(T).IsAssignableFrom(objectType)) {
 #if UNITY_ENABLE_CHECKS
-                Debug.LogError($"Failed to deserialize object of type {typeof(T)} from {networkData.DataType.Value}");
+                Debug.LogError($"Failed to deserialize object of type {typeof(T)} from {objectType}");
 #endif
                 return null;
             }
@@ -142,11 +142,11 @@ namespace AshTwinProject.Core
 
         public static T ToObject<T>(this NetworkData128 networkData) where T : class, INetworkable
         {
-            Type objectType = Type.GetType(networkData.DataType.Value);
+            Type objectType = NetworkTypeRegistry.GetType(networkData.TypeID);
 
             if (objectType == null || !typeof(T).IsAssignableFrom(objectType)) {
 #if UNITY_ENABLE_CHECKS
-                Debug.LogError($"Failed to deserialize object of type {typeof(T)} from {networkData.DataType.Value}");
+                Debug.LogError($"Failed to deserialize object of type {typeof(T)} from {objectType}");
 #endif
                 return null;
             }
@@ -157,11 +157,11 @@ namespace AshTwinProject.Core
 
         public static T ToObject<T>(this NetworkData512 networkData) where T : class, INetworkable
         {
-            Type objectType = Type.GetType(networkData.DataType.Value);
+            Type objectType = NetworkTypeRegistry.GetType(networkData.TypeID);
 
             if (objectType == null || !typeof(T).IsAssignableFrom(objectType)) {
 #if UNITY_ENABLE_CHECKS
-                Debug.LogError($"Failed to deserialize object of type {typeof(T)} from {networkData.DataType.Value}");
+                Debug.LogError($"Failed to deserialize object of type {typeof(T)} from {objectType}");
 #endif
                 return null;
             }
@@ -172,11 +172,11 @@ namespace AshTwinProject.Core
 
         public static T ToObject<T>(this NetworkData4096 networkData) where T : class, INetworkable
         {
-            Type objectType = Type.GetType(networkData.DataType.Value);
+            Type objectType = NetworkTypeRegistry.GetType(networkData.TypeID);
 
             if (objectType == null || !typeof(T).IsAssignableFrom(objectType)) {
 #if UNITY_ENABLE_CHECKS
-                Debug.LogError($"Failed to deserialize object of type {typeof(T)} from {networkData.DataType.Value}");
+                Debug.LogError($"Failed to deserialize object of type {typeof(T)} from {objectType}");
 #endif
                 return null;
             }

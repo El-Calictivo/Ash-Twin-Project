@@ -1,0 +1,14 @@
+{
+    "Entries": [
+        {
+            "AssemblyName": "Payosky.AshTwinProject",
+            "TypeName": "AshTwinProject.Samples.SyncedEventExample",
+            "Id": 597797310
+        },
+        {
+            "AssemblyName": "Payosky.AshTwinProject",
+            "TypeName": "AshTwinProject.Samples.SyncedStateExample",
+            "Id": 2205842427
+        }
+    ]
+}

@@ -17,20 +17,20 @@ namespace AshTwinProject.Core
     public struct NetworkData32 : INetworkData, IEquatable<NetworkData32>
     {
         public bool HasData;
-        public FixedString512Bytes DataType;
+        public uint TypeID;
         public FixedString32Bytes DataPayload;
 
         public void NetworkSerialize<T>(BufferSerializer<T> serializer) where T : IReaderWriter
         {
             serializer.SerializeValue(ref HasData);
-            serializer.SerializeValue(ref DataType);
+            serializer.SerializeValue(ref TypeID);
             serializer.SerializeValue(ref DataPayload);
         }
 
         public bool Equals(NetworkData32 other)
         {
             return HasData == other.HasData
-                   && DataType.Equals(other.DataType)
+                   && TypeID.Equals(other.TypeID)
                    && DataPayload.Equals(other.DataPayload);
         }
     }
@@ -38,20 +38,20 @@ namespace AshTwinProject.Core
     public struct NetworkData64 : INetworkData, IEquatable<NetworkData64>
     {
         public bool HasData;
-        public FixedString512Bytes DataType;
+        public uint TypeID;
         public FixedString64Bytes DataPayload;
 
         public void NetworkSerialize<T>(BufferSerializer<T> serializer) where T : IReaderWriter
         {
             serializer.SerializeValue(ref HasData);
-            serializer.SerializeValue(ref DataType);
+            serializer.SerializeValue(ref TypeID);
             serializer.SerializeValue(ref DataPayload);
         }
 
         public bool Equals(NetworkData64 other)
         {
             return HasData == other.HasData
-                   && DataType.Equals(other.DataType)
+                   && TypeID.Equals(other.TypeID)
                    && DataPayload.Equals(other.DataPayload);
         }
     }
@@ -59,20 +59,20 @@ namespace AshTwinProject.Core
     public struct NetworkData128 : INetworkData, IEquatable<NetworkData128>
     {
         public bool HasData;
-        public FixedString512Bytes DataType;
+        public uint TypeID;
         public FixedString128Bytes DataPayload;
 
         public void NetworkSerialize<T>(BufferSerializer<T> serializer) where T : IReaderWriter
         {
             serializer.SerializeValue(ref HasData);
-            serializer.SerializeValue(ref DataType);
+            serializer.SerializeValue(ref TypeID);
             serializer.SerializeValue(ref DataPayload);
         }
 
         public bool Equals(NetworkData128 other)
         {
             return HasData == other.HasData
-                   && DataType.Equals(other.DataType)
+                   && TypeID.Equals(other.TypeID)
                    && DataPayload.Equals(other.DataPayload);
         }
     }
@@ -80,20 +80,20 @@ namespace AshTwinProject.Core
     public struct NetworkData512 : INetworkData, IEquatable<NetworkData512>
     {
         public bool HasData;
-        public FixedString512Bytes DataType;
+        public uint TypeID;
         public FixedString512Bytes DataPayload;
 
         public void NetworkSerialize<T>(BufferSerializer<T> serializer) where T : IReaderWriter
         {
             serializer.SerializeValue(ref HasData);
-            serializer.SerializeValue(ref DataType);
+            serializer.SerializeValue(ref TypeID);
             serializer.SerializeValue(ref DataPayload);
         }
 
         public bool Equals(NetworkData512 other)
         {
             return HasData == other.HasData
-                   && DataType.Equals(other.DataType)
+                   && TypeID.Equals(other.TypeID)
                    && DataPayload.Equals(other.DataPayload);
         }
     }
@@ -101,20 +101,20 @@ namespace AshTwinProject.Core
     public struct NetworkData4096 : INetworkData, IEquatable<NetworkData4096>
     {
         public bool HasData;
-        public FixedString512Bytes DataType;
+        public uint TypeID;
         public FixedString4096Bytes DataPayload;
 
         public void NetworkSerialize<T>(BufferSerializer<T> serializer) where T : IReaderWriter
         {
             serializer.SerializeValue(ref HasData);
-            serializer.SerializeValue(ref DataType);
+            serializer.SerializeValue(ref TypeID);
             serializer.SerializeValue(ref DataPayload);
         }
 
         public bool Equals(NetworkData4096 other)
         {
             return HasData == other.HasData
-                   && DataType.Equals(other.DataType)
+                   && TypeID.Equals(other.TypeID)
                    && DataPayload.Equals(other.DataPayload);
         }
     }

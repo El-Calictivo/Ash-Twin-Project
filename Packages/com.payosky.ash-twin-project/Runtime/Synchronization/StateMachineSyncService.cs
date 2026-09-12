@@ -52,7 +52,8 @@ namespace AshTwinProject.Synchronization
                 NetworkVariable<NetworkData4096>.OnValueChangedDelegate clientDelegate = (_, serverState) =>
                 {
 #if DEBUG
-                    Debug.Log($"ClientState Sync Requested: {serverState.DataType.Value}\nPayload: {serverState.DataPayload.Value}");
+                    Type eventType = NetworkTypeRegistry.GetType(serverState.TypeID);
+                    Debug.Log($"ClientState Sync Requested: {eventType.Name}\nPayload: {serverState.DataPayload.Value}");
 #endif
                     stateMachine.SetState(serverState.ToObject<ISyncedState>()).Forget();
                 };
