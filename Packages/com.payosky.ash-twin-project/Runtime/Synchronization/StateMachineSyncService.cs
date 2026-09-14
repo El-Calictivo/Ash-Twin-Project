@@ -75,7 +75,7 @@ namespace AshTwinProject.Synchronization
                 stateMachine.OnStateChangeRequested -= OnServerStateChanged;
                 stateMachine.OnStateChanged -= OnServerStateChanged;
             }
-            else if (_clientSyncListeners.TryGetValue(stateMachine, out NetworkVariable<NetworkData4096>.OnValueChangedDelegate listener)) {
+            else if (_clientSyncListeners.Remove(stateMachine, out NetworkVariable<NetworkData4096>.OnValueChangedDelegate listener)) {
                 syncedState.OnValueChanged -= listener;
             }
         }
