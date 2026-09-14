@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using UnityEngine;
 
 namespace AshTwinProject.Core
 {
@@ -67,5 +68,20 @@ namespace AshTwinProject.Core
         {
             return IdToType.TryGetValue(id, out type);
         }
+
+        [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.SubsystemRegistration)]
+        private static void Reset()
+        {
+            IdToType.Clear();
+            TypeToId.Clear();
+        }
+
+#if UNITY_INCLUDE_TESTS
+        public static void ResetForTests()
+        {
+            IdToType.Clear();
+            TypeToId.Clear();
+        }
+#endif
     }
 }

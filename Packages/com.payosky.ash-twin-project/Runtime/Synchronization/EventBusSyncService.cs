@@ -15,8 +15,6 @@ namespace AshTwinProject.Synchronization
     public class EventBusSyncService : NetworkBehaviour, IService
     {
         public virtual Type TypeSignature => typeof(EventBusSyncService);
-        private readonly Dictionary<IStateMachine, NetworkVariable<NetworkData4096>> _stateMachinesBound = new();
-        private readonly Dictionary<IStateMachine, NetworkVariable<NetworkData4096>.OnValueChangedDelegate> _clientSyncListeners = new();
 
         public override void OnNetworkSpawn()
         {

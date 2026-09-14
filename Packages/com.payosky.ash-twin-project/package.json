@@ -3,7 +3,7 @@
   "displayName": "Ash Twin Project",
   "version": "0.1.0",
   "unity": "6000.0",
-  "description": "A framework designed around scalable netcode and services",
+  "description": "AshTwinProject is a reusable Unity multiplayer package built on top of Netcode for GameObjects.",
   "license": "MIT",
   "dependencies": {
     "com.unity.test-framework": "1.6.0",
@@ -25,5 +25,8 @@
       "path": "Samples/Services"
     }
   ],
-  "hideInEditor": false
+  "hideInEditor": false,
+  "documentationUrl": "https://github.com/El-Calictivo/Ash-Twin-Project/blob/main/Packages/com.payosky.ash-twin-project/README.md",
+  "licensesUrl": "https://github.com/El-Calictivo/Ash-Twin-Project/blob/main/Packages/com.payosky.ash-twin-project/LICENSE.md",
+  "changelogUrl": "https://github.com/El-Calictivo/Ash-Twin-Project/blob/main/Packages/com.payosky.ash-twin-project/CHANGELOG.md"
 }
