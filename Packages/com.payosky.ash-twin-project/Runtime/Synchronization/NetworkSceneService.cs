@@ -35,15 +35,13 @@ namespace AshTwinProject.Synchronization
             }
 
             Scene scene = await completionSource.Task;
-            await UniTask.Yield();
+            await UniTask.WaitUntil(() =>
+            {
+                scene = SceneManager.GetSceneByName(sceneName);
+                return scene.IsValid() && scene.isLoaded;
+            });
+
             if (!setActive) return scene;
-
-            if (!scene.IsValid() || !scene.isLoaded) {
-#if UNITY_ENABLE_CHECKS
-                Debug.LogError($"Loaded scene is not valid: {sceneName}");
-#endif
-            }
-
             if (!SceneManager.SetActiveScene(scene)) {
 #if UNITY_ENABLE_CHECKS
                 Debug.LogError($"Failed to set active scene: {sceneName}");

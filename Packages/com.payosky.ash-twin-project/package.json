@@ -1,7 +1,7 @@
 {
   "name": "com.payosky.ash-twin-project",
   "displayName": "Ash Twin Project",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "unity": "6000.0",
   "description": "AshTwinProject is a reusable Unity multiplayer package built on top of Netcode for GameObjects.",
   "license": "MIT",
