@@ -12,10 +12,10 @@ namespace AshTwinProject
     [Serializable]
     public class SessionService : IService
     {
-        public Type TypeSignature => typeof(SessionService);
+        public virtual Type TypeSignature => typeof(SessionService);
         public UniTaskCompletionSource<ISession> CurrentSession { get; private set; }
 
-        public async UniTask<ISession> CreateSession(SessionOptions options)
+        public virtual async UniTask<ISession> CreateSession(SessionOptions options)
         {
             if (CurrentSession == null) {
                 CurrentSession = new UniTaskCompletionSource<ISession>();
@@ -42,7 +42,7 @@ namespace AshTwinProject
             }
         }
 
-        public async UniTask<ISession> JoinSession(string sessionId, JoinSessionOptions options)
+        public virtual async UniTask<ISession> JoinSession(string sessionId, JoinSessionOptions options)
         {
             if (CurrentSession == null) {
                 CurrentSession = new UniTaskCompletionSource<ISession>();
@@ -69,7 +69,7 @@ namespace AshTwinProject
             }
         }
 
-        public async UniTask LeaveCurrentSession()
+        public virtual async UniTask LeaveCurrentSession()
         {
             if (CurrentSession == null) return;
 

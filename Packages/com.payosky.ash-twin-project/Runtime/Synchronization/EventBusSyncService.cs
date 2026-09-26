@@ -1,9 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
 using AshTwinProject.Core;
 using NomaiFramework.EventBus;
 using NomaiFramework.Services;
-using NomaiFramework.StateManagement;
 using Unity.Netcode;
 
 namespace AshTwinProject.Synchronization
@@ -22,7 +20,7 @@ namespace AshTwinProject.Synchronization
             ServiceLocator.GetService<EventBusService>().OnEventDispatched += HandleRaisedEvent;
         }
 
-        public void HandleRaisedEvent(IEvent raisedEvent)
+        protected void HandleRaisedEvent(IEvent raisedEvent)
         {
             if (!IsServer || raisedEvent is not ISyncedEvent syncedEvent) return;
 

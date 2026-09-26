@@ -17,7 +17,7 @@ namespace AshTwinProject.Synchronization
     /// </remarks>
     public class NetworkSceneService : IService
     {
-        public Type TypeSignature => typeof(NetworkSceneService);
+        public virtual Type TypeSignature => typeof(NetworkSceneService);
 
         public async UniTask<Scene> LoadScene(string sceneName, LoadSceneMode loadSceneMode = LoadSceneMode.Single, bool setActive = false)
         {
