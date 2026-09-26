@@ -10,7 +10,7 @@ The repository acts as the development environment for the package and contains 
 
 * **Unity:** 6000.0 or newer
 * **Package:** `com.payosky.ash-twin-project`
-* **Current Version:** `0.1.1`
+* **Current Version:** `0.2.0`
 
 ## Dependencies
 
@@ -18,12 +18,12 @@ Ash Twin Project requires Unity **6000.0** or newer.
 
 | Dependency                 | Package ID                       |  Version |
 | -------------------------- | -------------------------------- | -------: |
-| Unity Test Framework       | `com.unity.test-framework`       |  `1.6.0` |
+| Unity Test Framework       | `com.unity.test-framework`       |  `1.0.0` |
 | Unity Collections          | `com.unity.collections`          |  `2.0.0` |
-| Netcode for GameObjects    | `com.unity.netcode.gameobjects`  | `2.13.2` |
-| Unity Multiplayer Services | `com.unity.services.multiplayer` |  `2.3.2` |
-| UniTask                    | `com.cysharp.unitask`            | `2.5.11` |
-| Nomai Framework            | `com.payosky.nomai-framework`    |  `0.1.1` |
+| Netcode for GameObjects    | `com.unity.netcode.gameobjects`  | `2.0.0` |
+| Unity Multiplayer Services | `com.unity.services.multiplayer` |  `2.0.0` |
+| UniTask                    | `com.cysharp.unitask`            | `2.0.0` |
+| Nomai Framework            | `com.payosky.nomai-framework`    |  `0.2.0` |
 
 ## Installation
 

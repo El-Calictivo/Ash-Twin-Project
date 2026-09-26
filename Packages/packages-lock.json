@@ -19,12 +19,12 @@
       "depth": 0,
       "source": "embedded",
       "dependencies": {
-        "com.unity.test-framework": "1.6.0",
+        "com.unity.test-framework": "1.0.0",
         "com.unity.collections": "2.0.0",
-        "com.unity.netcode.gameobjects": "2.13.2",
-        "com.unity.services.multiplayer": "2.3.2",
-        "com.cysharp.unitask": "2.5.11",
-        "com.payosky.nomai-framework": "0.1.1"
+        "com.unity.netcode.gameobjects": "2.0.0",
+        "com.unity.services.multiplayer": "2.0.0",
+        "com.cysharp.unitask": "2.0.0",
+        "com.payosky.nomai-framework": "0.2.0"
       }
     },
     "com.payosky.nomai-framework": {
@@ -32,11 +32,11 @@
       "depth": 0,
       "source": "git",
       "dependencies": {
-        "com.unity.test-framework": "1.8.0",
-        "com.mackysoft.serializereference-extensions": "1.7.0",
-        "com.cysharp.unitask": "2.5.11"
+        "com.unity.test-framework": "1.0.0",
+        "com.mackysoft.serializereference-extensions": "1.0.0",
+        "com.cysharp.unitask": "2.0.0"
       },
-      "hash": "9b10ff08a4c5ebef82810edfaacc78cf25ad24b4"
+      "hash": "6382c907fa5056966fcd9ea552cc20a1146183f5"
     },
     "com.unity.burst": {
       "version": "2.0.0",
